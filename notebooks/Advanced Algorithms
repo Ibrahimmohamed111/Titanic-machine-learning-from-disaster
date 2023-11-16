@@ -1,0 +1,22 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class RemoveDuplicates {
+    public static char[] removeDuplicates(char [] arr) {
+        Set<Character› set = new HashSet<>();
+        StringBuilder uniqueChars = new StringBuilder);
+        for (char c : arr) {
+            if (!set.contains(c)) {
+                 set.add(c);
+                 uniqueChars.append(c) ;
+              }
+          }
+         return uniqueChars.toString().toCharArray();
+    }
+public static void main(String[] args) {
+      char[] arr = {'a', 'b', 'c' , 'a', 'd', 'b', 'e', 'c'};
+      char[] uniqueArr = removeDuplicates(arr);
+      System.out.println(uniqueArr);
+ // Output: abcde
+    }  
+}
